@@ -103,20 +103,6 @@ The creator, Shaman Siddiqui, assumes no responsibility for misuse or malicious 
 
 ---
 
-## • Example Images
-
-Below are examples showcasing the functionality of MetaBot Engine:
-
-1. **Human-like Interaction Simulation**
-   ![Interaction Simulation](readmePic/simulation.png)
-
-2. **Performance Monitoring**
-   ![Performance Monitoring](readmePic/performance.png)
-
-3. **Multi-Tab Traffic Simulation**
-   ![Multi-Tab Simulation](readmePic/multitab.png)
-
----
 
 ## • Contributing
 
