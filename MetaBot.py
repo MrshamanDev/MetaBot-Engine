@@ -243,7 +243,7 @@ class AdvancedViewBot(QWidget):
         self.setup_logging()
 
     def init_ui(self):
-        self.setWindowTitle("MetaBot Engine - Advanced")
+        self.setWindowTitle("Advanced Human-like View Bot")
         self.setGeometry(100, 100, 1000, 800)
         layout = QVBoxLayout()
 
@@ -306,6 +306,8 @@ class AdvancedViewBot(QWidget):
         layout.addWidget(QLabel("Console:"))
         layout.addWidget(self.console_box)
 
+        layout.addWidget(self.create_footer())
+
         main_widget.setLayout(layout)
         return main_widget
 
@@ -362,6 +364,8 @@ class AdvancedViewBot(QWidget):
         self.dark_mode_checkbox.stateChanged.connect(self.toggle_dark_mode)
         layout.addWidget(self.dark_mode_checkbox)
 
+        layout.addWidget(self.create_footer())
+
         settings_widget.setLayout(layout)
         return settings_widget
 
@@ -379,8 +383,16 @@ class AdvancedViewBot(QWidget):
         layout.addWidget(self.memory_label)
         layout.addWidget(self.network_label)
 
+        layout.addWidget(self.create_footer())
+
         performance_widget.setLayout(layout)
         return performance_widget
+
+    def create_footer(self):
+        footer = QLabel("MetaBot Engine Programmed By Shaman Siddiqui")
+        footer.setAlignment(Qt.AlignCenter)
+        footer.setStyleSheet("color: #888; margin-top: 10px;")
+        return footer
 
     def setup_logging(self):
         logging.basicConfig(
@@ -492,6 +504,7 @@ class AdvancedViewBot(QWidget):
                 QPushButton:disabled { background-color: #45a049; }
                 QTableWidget { gridline-color: #3b3b3b; }
                 QHeaderView::section { background-color: #3b3b3b; color: #f0f0f0; }
+                QLabel[footer="true"] { color: #888; }
             """)
         else:
             self.setStyleSheet("")
